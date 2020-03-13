@@ -1,0 +1,23 @@
+<body>
+    <h1>{{title}}</h1>
+    <table>
+      <tr>
+      {% for h in header %}
+        <th>{{h}}</th>
+      {% endfor %}
+      </tr>
+
+      {% for i in val %}
+      <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.mail }}</td>
+        <td>{% if i.gender == False %}男{% endif %}
+            {% if i.gender == True %}女{% endif %}</td>
+        <td>{{ i.department }}</td>
+        <td>{{ i.year }}</td>
+        <td>{{ i.created_at }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+  </body>
